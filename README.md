@@ -27,7 +27,7 @@ where "url you just copied" (without the quotation marks) is the url to this rep
 For example:
 
 ```bash
-git clone git@github.com:pclubiitk/my-first-pr.git
+git clone git@github.com:hardik1408/my-first-pr.git
 ```
 
 Here you're copying the contents of the repository on GitHub to your computer.
