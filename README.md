@@ -102,6 +102,6 @@ If you go to your repository on GitHub, you'll see a `Compare & pull request` bu
 
 Now submit the pull request.
 
-<img style="float: right;" src="https://firstcontributions.github.io/assets/Readme/submit-pull-request.png" alt="submit pull request" />
+<img style="float: right;" src="https://github.com/user-attachments/assets/194ebdce-d2e1-4528-a7cd-8b7eb639e4eb" alt="submit pull request" />
 You will get a notification email once the changes have been merged.
 
