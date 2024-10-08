@@ -1,18 +1,18 @@
 name: Auto-merge PRs to Contributors.md
 
 on:
-  pull_request:
+  pull_request_target:
     types: [opened, synchronize]
     paths:
-      - 'Contributors.md' # Only trigger if Contributors.md is changed
+      - 'Contributors.md'  # Only trigger if Contributors.md is changed
 
 jobs:
   auto-merge:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
-      pull-requests: write
-      issues: write
+      contents: write  # Allow merging
+      pull-requests: write  # Allow PR actions
+      issues: write  # Allow posting comments
 
     steps:
       # Checkout the repository code
