@@ -102,7 +102,7 @@ jobs:
                   
                   const gif = `![celebration gif](${getRandomGif()})`;
 
-                  return `${greeting}\n\n${starRepoMessage}\n\n${nextSteps}\n\n${feedbackMessage}\n\n${gif}`;
+                  return `${greeting}\n\n${starRepoMessage}\n\n\n${feedbackMessage}\n\n${gif}`;
                 }
 
                 // Generate the merge message using the getMergeMessage function
