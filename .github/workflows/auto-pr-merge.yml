@@ -39,6 +39,7 @@ jobs:
 
       # Merge the PR if only Contributors.md was changed
       - name: Merge PR
+        id: merge_pr
         if: env.only_contributors == 'true'
         uses: actions/github-script@v6
         with:
@@ -59,6 +60,24 @@ jobs:
             } else {
               throw new Error(`Failed to merge pull request #${pull_number}.`);
             }
+
+      # Post a congratulatory comment after the PR is merged
+      - name: Post comment after merge
+        if: steps.merge_pr.conclusion == 'success'
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const user = context.payload.pull_request.user.login;
+            const message = `🎉 Hello @${user}, thank you for your contribution! Your pull request has been successfully merged! 🎉\n\nWe appreciate your effort in improving the project. Feel free to contribute again in the future!\n 😊`;
+
+            // Post the comment on the PR
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.payload.pull_request.number,
+              body: message
+            });
 
       # Post a comment if the PR was not merged because other files were changed
       - name: Post comment if not merged
