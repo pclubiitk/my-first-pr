@@ -22,7 +22,7 @@
 -
 -
 -
--
+- emminence was in intro to git
 -
 -
 -
