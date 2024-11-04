@@ -6,7 +6,7 @@
 - deleted yps test and made a new test
 - emminence laughs
 - testing the conflicts
-- 
+- JA "How many programmers does it take to change a light bulb?"..."None, that’s a hardware problem! 💡"
 Sujal was here ^_^
 - 
 - Vaibhav is good..
